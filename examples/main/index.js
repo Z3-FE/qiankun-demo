@@ -23,9 +23,16 @@ registerMicroApps(
     {
       name: 'myHtml',
       entry: '//localhost:8100',
-      container: '#app-view',
+      container: '#app-view', //<main id="app-view"></main>
      // loader, 可以设置等待效果
-      activeRule: '/myHtml',
+      activeRule: '/myHtml', //跳转地址
+    },
+    {
+      name: 'myHtml',
+      entry: '//localhost:8200',
+      container: '#app-view', //<main id="app-view"></main>
+     // loader, 可以设置等待效果
+      activeRule: '/myReact', //跳转地址
     },
 
   ],
