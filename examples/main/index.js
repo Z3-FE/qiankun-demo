@@ -21,18 +21,17 @@ import './index.less';
 registerMicroApps(
   [
     {
-      name: 'myHtml',
+      name: 'myHtml', //这个是唯一的
       entry: '//localhost:8100',
       container: '#app-view', //<main id="app-view"></main>
      // loader, 可以设置等待效果
       activeRule: '/myHtml', //跳转地址
     },
     {
-      name: 'myHtml',
+      name: 'myReact', 
       entry: '//localhost:8200',
-      container: '#app-view', //<main id="app-view"></main>
-     // loader, 可以设置等待效果
-      activeRule: '/myReact', //跳转地址
+      container: '#app-view', 
+      activeRule: '/myReact', 
     },
 
   ],
