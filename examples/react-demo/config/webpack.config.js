@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const {name} = require('../../../package')
+const {name} = require('../../../package.json')
 const webpack = require('webpack');
 const resolve = require('resolve');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -21,6 +21,10 @@ const paths = require('./paths');
 const modules = require('./modules');
 const getClientEnvironment = require('./env');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
+
+// const publicPath = process.env.NODE_ENV === 'production' ? 'https://qiankun.umijs.org/' : `http://localhost:${port}`;
+
+
 const ForkTsCheckerWebpackPlugin =
   process.env.TSC_COMPILE_ON_ERROR === 'true'
     ? require('react-dev-utils/ForkTsCheckerWarningWebpackPlugin')
@@ -403,6 +407,7 @@ module.exports = function (webpackEnv) {
                   loader: require.resolve('file-loader'),
                   options: {
                     name: 'static/media/[name].[hash].[ext]',
+                    // publicPath: 'http://localhost:8099'
                   },
                 },
               ],

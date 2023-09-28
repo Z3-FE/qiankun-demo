@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './public-path.js'
 
 let root;
 function render(params) {
@@ -32,6 +31,7 @@ function storeTest(props) {
 
 // 判断是否在qiankun环境下，非qiankun环境下独立运行
 if (!window.__POWERED_BY_QIANKUN__) {
+  console.log('独立执行',);
   render({});
 }
 

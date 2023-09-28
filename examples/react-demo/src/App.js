@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import logo2 from "./image/logo192.png";
 import './App.css';
-import './public-path.js'
 function App() {
   return (
     <div className="App">

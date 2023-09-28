@@ -40,6 +40,33 @@ module.exports = {
         test: /\.(le|c)ss$/,
         use: ['style-loader', 'css-loader', 'less-loader'],
       },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: require.resolve('@svgr/webpack'),
+            options: {
+              prettier: false,
+              svgo: false,
+              svgoConfig: {
+                plugins: [{ removeViewBox: false }],
+              },
+              titleProp: true,
+              ref: true,
+            },
+          },
+          {
+            loader: require.resolve('file-loader'),
+            options: {
+              name: 'static/media/[name].[hash].[ext]',
+              publicPath: '/react-demo'
+            },
+          },
+        ],
+        issuer: {
+          and: [/\.(ts|tsx|js|jsx|md|mdx)$/],
+        },
+      },
     ],
   },
   plugins: [
