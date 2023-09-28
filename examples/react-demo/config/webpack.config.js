@@ -407,7 +407,7 @@ module.exports = function (webpackEnv) {
                   loader: require.resolve('file-loader'),
                   options: {
                     name: 'static/media/[name].[hash].[ext]',
-                    // publicPath: 'http://localhost:8099'
+                    publicPath: 'http://localhost:8200/' //支持静态资源展示
                   },
                 },
               ],
