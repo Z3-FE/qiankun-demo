@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "node start.js",
-    "examples:install": "npm-run-all --serial build install:*",
+    "examples:install": "npm-run-all --serial install:*",
     "examples:start": "npm-run-all --parallel start:*",
     "install:main": "cd examples/main && yarn",
     "start:main": "cd examples/main && yarn start",
