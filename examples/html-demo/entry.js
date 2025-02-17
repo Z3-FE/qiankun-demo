@@ -1,5 +1,4 @@
 const render = $ => {
-  $('#myHtml-container').html('Hello, render with jQuery');
   return Promise.resolve();
 };
 
@@ -9,9 +8,9 @@ const render = $ => {
       console.log('myHtml bootstrap');
       return Promise.resolve();
     },
-    mount: () => {
-      console.log('myHtml mount');
-      return render($);
+    mount: (props) => {
+      console.log('props',props);
+      return render();
     },
     unmount: () => {
       console.log('myHtml unmount');
